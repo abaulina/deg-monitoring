@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Libs\libcapi10.so" />
+    <None Remove="Libs\libcpblindsig.so" />
+    <None Remove="Libs\libcrypto.so" />
+    <None Remove="Libs\libgostcrypto.dll" />
+    <None Remove="Libs\libssl.so" />
+    <None Remove="Libs\openssl-net\libeay32.dll" />
+    <None Remove="Libs\openssl-net\ssleay32.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Libs\libcapi10.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\libcpblindsig.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\libcrypto.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\libssl.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.24.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SimpleBase" Version="4.0.0" />
+    <PackageReference Include="System.Formats.Asn1" Version="7.0.0" />
+    <PackageReference Include="System.Security.Permissions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CryptoPro.Sharpei.Base">
+      <HintPath>..\DegMonitoring\Libs\CryptoPro.Sharpei.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="CryptoPro.Sharpei.ServiceModel">
+      <HintPath>..\DegMonitoring\Libs\CryptoPro.Sharpei.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CryptoPro.Sharpei.ServiceModel45">
+      <HintPath>..\DegMonitoring\Libs\CryptoPro.Sharpei.ServiceModel45.dll</HintPath>
+    </Reference>
+    <Reference Include="CryptoPro.Sharpei.Xml">
+      <HintPath>..\DegMonitoring\Libs\CryptoPro.Sharpei.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Libs\libgostcrypto.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Libs\openssl-net\libeay32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\openssl-net\ssleay32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

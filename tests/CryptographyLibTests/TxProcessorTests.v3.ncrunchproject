@@ -1,0 +1,25 @@
+﻿<ProjectConfiguration>
+  <Settings>
+    <DefaultTestTimeout>0</DefaultTestTimeout>
+    <HiddenComponentWarnings>
+      <Value>LongTestTimesWithoutParallelExecution</Value>
+    </HiddenComponentWarnings>
+    <IgnoredTests>
+      <NamedTestSelector>
+        <TestName>TxProcessorTests.TxProcessorTests.ShouldValidateTestDataMskAsync(".\\..\\..\\..\\test_data\\pool_msk2\\")</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>TxProcessorTests.TxProcessorTests.ShouldValidateTestDataMskAsync(".\\..\\..\\..\\test_data\\pool_msk3\\")</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>TxProcessorTests.TxProcessorTests.ShouldValidateTestDataMskAsync(".\\..\\..\\..\\test_data\\pool_msk4\\")</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>TxProcessorTests.TxProcessorTests.ShouldValidateTestDataMskAsync(".\\..\\..\\..\\test_data\\pool_msk5\\")</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>TxProcessorTests.TxProcessorTests.ShouldValidateTestDataMskAsync(".\\..\\..\\..\\test_data\\pool_msk1\\")</TestName>
+      </NamedTestSelector>
+    </IgnoredTests>
+  </Settings>
+</ProjectConfiguration>

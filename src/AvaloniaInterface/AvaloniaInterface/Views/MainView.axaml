@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AvaloniaInterface.ViewModels"
+             mc:Ignorable="d"
+             x:Class="AvaloniaInterface.Views.MainView"
+             x:DataType="vm:MainViewModel"
+             VerticalAlignment="Stretch">
+    <Design.DataContext>
+        <vm:MainViewModel />
+    </Design.DataContext>
+
+    <DockPanel>
+        <StackPanel HorizontalAlignment="Stretch" Spacing="10" Margin="10">
+            <StackPanel>
+                <Button Content="Выбрать папку с архивами" Click="click_GetFolderPath" />
+                <TextBlock Name="SelectedFolderPath" Margin="10" />
+            </StackPanel>
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="4"
+                    Padding="10 0 0 0">
+                <ScrollViewer x:Name="LogScrollViewer">
+                    <TextBlock x:Name="LogTextBox" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                </ScrollViewer>
+            </Border>
+        </StackPanel>
+    </DockPanel>
+</UserControl>
